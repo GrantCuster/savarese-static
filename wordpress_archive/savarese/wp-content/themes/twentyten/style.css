@@ -1,0 +1,2515 @@
+/*
+Theme Name: Twenty Ten
+Theme URI: http://wordpress.org/
+Description: The 2010 theme for WordPress is stylish, customizable, simple, and readable -- make it yours with a custom menu, header image, and background. Twenty Ten supports six widgetized areas (two in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes stylesheets for print and the admin Visual Editor, special styles for posts in the "Asides" and "Gallery" categories, and has an optional one-column page template that removes the sidebar.
+Author: the WordPress team
+Version: 1.1
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+
+/* =Layout
+-------------------------------------------------------------- */
+
+/*
+LAYOUT: Two columns
+DESCRIPTION: Two-column fixed layout with one sidebar left of content
+*/
+
+#container {
+	width: 691px;
+	float: right;
+	margin: 0;	
+	padding: 0;
+}
+#sidebar {
+	float: left;
+	width: 258px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/sidebarback.png);
+	background-repeat: repeat-y;
+	background-position: 6px 0;
+	margin: 375px 0 0;
+}
+#primary {
+	padding: 30px 30px 1px 23px;
+	margin-left: 7px;
+	list-style: none;
+}
+#sidebar-bottom {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/sidebarbottom.png);
+	background-repeat: no-repeat;
+	width: 246px;
+	height: 17px;
+	margin-left: 6px;
+	margin-bottom: 4em;
+	clear: left;
+}
+#footer {
+	clear: both;
+	width: 100%;
+}
+
+
+/* =Fonts
+-------------------------------------------------------------- */
+body,
+input,
+textarea,
+.page-title span,
+.pingback a.url {
+	font-family: m-1c-1, Arial, Helvetica, Sans-Serif;
+}
+h3#comments-title,
+h3#reply-title,
+#access .menu,
+#access div.menu ul,
+#cancel-comment-reply-link,
+.form-allowed-tags,
+#site-info,
+#site-title,
+#wp-calendar,
+.comment-meta,
+.comment-body tr th,
+.comment-body thead th,
+.entry-content label,
+.entry-content tr th,
+.entry-content thead th,
+.entry-meta,
+.entry-title,
+.entry-utility,
+#respond label,
+.navigation,
+.page-title,
+.pingback p,
+.reply,
+.widget-title,
+.wp-caption-text,
+input[type=submit] {
+	font-family: m-1c-1, Arial, Helvetica, Sans-Serif;
+}
+pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+}
+code {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+
+/* =Structure
+-------------------------------------------------------------- */
+
+/* The main theme structure */
+#access .menu-header,
+div.menu,
+#branding,
+#wrapper {
+	width: 950px;
+	margin: 0 auto;
+}
+#wrapper {
+	margin-top: 30px;
+	padding: 0;
+	position: relative;
+}
+#branding {
+ 	height: 2.95em;
+ 	margin-bottom: 1.5em;
+}
+
+/* Structure the footer area */
+#footer-widget-area {
+	overflow: hidden;
+}
+#footer-widget-area .widget-area {
+	float: left;
+	margin-right: 20px;
+	width: 220px;
+}
+#footer-widget-area #fourth {
+	margin-right: 0;
+}
+#site-generator {
+	float: right;
+	width: 220px;
+}
+
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+/* Main global 'theme' and typographic styles */
+body {
+	background: #eff4f8;
+}
+body#rp {
+	background: #f4f9fc;
+}
+body#lb {
+	background: #fef9f9;
+}
+body#pphd {
+	background: #fff9ee;
+}
+body#dsq {
+	background: #f3f4ff;
+}
+body,
+input,
+textarea {
+	color: #1b1b1b;
+	font-size: 12px;
+	line-height: 18px;
+}
+hr {
+	background-color: #e7e7e7;
+	border: 0;
+	clear: both;
+	height: 1px;
+	margin-bottom: 18px;
+}
+
+/* Text elements */
+p {
+	margin: 0 0 18px 0;
+}
+ul {
+}
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+dl {
+	margin: 0 0 24px 0;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 18px;
+}
+strong {
+	font-weight: bold;
+}
+cite,
+em,
+i {
+	font-style: italic;
+}
+big {
+	font-size: 131.25%;
+}
+ins {
+	background: #ffc;
+	text-decoration: none;
+}
+blockquote {
+	padding: 0 2em;
+	color: #444444;
+}
+blockquote cite,
+blockquote em,
+blockquote i {
+	font-style: normal;
+}
+pre {
+	background: #f7f7f7;
+	color: #222;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+input[type="text"],
+textarea {
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;
+}
+a:link {
+	color: #ff4b33;
+	text-decoration: underline;
+}
+a:visited {
+	color: #ffa599;
+}
+a:active,
+a:hover {
+	text-decoration: none;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	position: absolute;
+	left: -9000px;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+#main {
+	clear: both;
+	overflow: hidden;
+	padding: 10px 0 0 0;
+}
+#content {
+	margin-bottom: 4em;
+	margin-left: 28px;
+	clear: both;
+}
+#content,
+#content input,
+#content textarea {
+	color: #191919;
+	font-size: 14px;
+	line-height: 24px;
+}
+#content p,
+#content ul,
+#content ol,
+#content dd,
+#content pre,
+#content hr {
+	margin-bottom: 18px;
+}
+#content ul ul,
+#content ol ol,
+#content ul ol,
+#content ol ul {
+	margin-bottom: 0;
+}
+#content pre,
+#content kbd,
+#content tt,
+#content var {
+	font-size: 15px;
+	line-height: 21px;
+}
+#content code {
+	font-size: 13px;
+}
+#content dt,
+#content th {
+	color: #000;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+	color: #000;
+	line-height: 1.5em;
+	margin: 0 0 20px 0;
+}
+#content table {
+	border: 1px solid #e7e7e7;
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
+}
+#content tr th,
+#content thead th {
+	color: #888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
+}
+#content tr td {
+	border-top: 1px solid #e7e7e7;
+	padding: 6px 24px;
+}
+#content tr.odd td {
+	background: #f2f7fc;
+}
+.hentry {
+	margin: 0 0 15px 0;
+	border-bottom: dotted 2px #888;
+}
+.home .sticky {
+	background: #f2f7fc;
+	border-top: 4px solid #000;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 18px 20px;
+}
+.single .hentry {
+	margin: 0 0 36px 0;
+}
+.page-title {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 36px 0;
+}
+.page-title span {
+	color: #333;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+}
+.page-title a:link,
+.page-title a:visited {
+	color: #888;
+	text-decoration: none;
+}
+.page-title a:active,
+.page-title a:hover {
+	color: #ff4b33;
+}
+#content .entry-title {
+	color: #191919;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1.1em;
+	margin-bottom: 0;
+	text-shadow: 0 1px 1px #fff;
+}
+.entry-title a:link,
+.entry-title a:visited {
+	color: #000;
+	text-decoration: none;
+	text-indent: 0;
+}
+.entry-title a:active,
+.entry-title a:hover {
+	color: #333;
+}
+.entry-meta {
+	color: #888;
+	font-size: 12px;
+}
+.entry-meta abbr,
+.entry-utility abbr {
+	border: none;
+}
+.entry-meta abbr:hover,
+.entry-utility abbr:hover {
+	border-bottom: 1px dotted #666;
+}
+.entry-content,
+.entry-summary {
+	clear: both;
+	padding: 4px 0 0 0;
+}
+#content .entry-summary p:last-child {
+	margin-bottom: 12px;
+}
+.entry-content fieldset {
+	border: 1px solid #e7e7e7;
+	margin: 0 0 24px 0;
+	padding: 24px;
+}
+.entry-content fieldset legend {
+	background: #fff;
+	color: #000;
+	font-weight: bold;
+	padding: 0 24px;
+}
+.entry-content input {
+	margin: 0 0 24px 0;
+}
+.entry-content input.file,
+.entry-content input.button {
+	margin-right: 24px;
+}
+.entry-content label {
+	color: #888;
+	font-size: 12px;
+}
+.entry-content select {
+	margin: 0 0 24px 0;
+}
+.entry-content sup,
+.entry-content sub {
+	font-size: 10px;
+}
+.entry-content blockquote.left {
+	float: left;
+	margin-left: 0;
+	margin-right: 24px;
+	text-align: right;
+	width: 33%;
+}
+.entry-content blockquote.right {
+	float: right;
+	margin-left: 24px;
+	margin-right: 0;
+	text-align: left;
+	width: 33%;
+}
+.page-link {
+	color: #000;
+	font-weight: bold;
+	margin: 0 0 22px 0;
+	word-spacing: 0.5em;
+}
+.page-link a:link,
+.page-link a:visited {
+	background: #f1f1f1;
+	color: #333;
+	font-weight: normal;
+	padding: 0.5em 0.75em;
+	text-decoration: none;
+}
+.home .sticky .page-link a {
+	background: #d9e8f7;
+}
+.page-link a:active,
+.page-link a:hover {
+	color: #ff4b33;
+}
+body.page .edit-link {
+	clear: both;
+	display: block;
+}
+#entry-author-info {
+	background: #f2f7fc;
+	border-top: 4px solid #000;
+	clear: both;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 24px 0;
+	overflow: hidden;
+	padding: 18px 20px;
+}
+#entry-author-info #author-avatar {
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	float: left;
+	height: 60px;
+	margin: 0 -104px 0 0;
+	padding: 11px;
+}
+#entry-author-info #author-description {
+	float: left;
+	margin: 0 0 0 104px;
+}
+#entry-author-info h2 {
+	color: #000;
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+.entry-utility {
+	clear: both;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+}
+.entry-meta a,
+.entry-utility a {
+	color: #888;
+}
+.entry-meta a:hover,
+.entry-utility a:hover {
+	color: #ff4b33;
+}
+#content .video-player {
+	padding: 0;
+}
+
+/* =Images
+-------------------------------------------------------------- */
+
+#content img {
+	margin: 0;c
+}
+#content .attachment img {
+	max-width: 900px;
+}
+#content .alignleft,
+#content img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+}
+#content .alignright,
+#content img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+#content .aligncenter,
+#content img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content img.alignleft,
+#content img.alignright,
+#content img.aligncenter {
+	margin-bottom: 12px;
+}
+#content .wp-caption {
+	background: #FAFCFD;
+	line-height: 18px;
+	margin-bottom: 20px;
+	padding: 4px;
+	text-align: center;
+}
+#content .wp-caption img {
+	margin: 5px 5px 0;
+}
+#content .wp-caption p.wp-caption-text {
+	color: #555;
+	font-size: 12px;
+	margin: 5px;
+}
+#content .wp-smiley {
+	margin: 0;
+}
+#content .gallery {
+	margin: 0 auto 18px;
+}
+#content .gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+#content .gallery img {
+	border: 2px solid #cfcfcf;
+}
+#content .gallery .gallery-caption {
+	color: #888;
+	font-size: 12px;
+	margin: 0 0 12px;
+}
+#content .gallery dl {
+	margin: 0;
+}
+#content .gallery img {
+	border: 10px solid #f1f1f1;
+}
+#content .gallery br+br {
+	display: none;
+}
+#content .attachment img { /* single attachment images should be centered */
+	display: block;
+	margin: 0 auto;
+}
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+.navigation {
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+	overflow: hidden;
+}
+.navigation a:link,
+.navigation a:visited {
+	color: #888;
+	text-decoration: none;
+}
+.navigation a:active,
+.navigation a:hover {
+	color: #ff4b33;
+}
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#nav-above {
+	margin: 0 0 18px 0;
+}
+#nav-above {
+	display: none;
+}
+.paged #nav-above,
+.single #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: -8px 0 0 0;
+}
+.single #nav-below {
+	margin-top: -30px;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+#comments {
+	clear: both;
+}
+#comments .navigation {
+	padding: 0 0 18px 0;
+}
+h3#comments-title,
+h3#reply-title {
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+h3#comments-title {
+	padding: 24px 0;
+}
+.commentlist {
+	list-style: none;
+	margin: 0;
+}
+.commentlist li.comment {
+	border-bottom: 1px solid #e7e7e7;
+	line-height: 24px;
+	margin: 0 0 24px 0;
+	padding: 0 0 0 56px;
+	position: relative;
+}
+.commentlist li:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+#comments .comment-body ul,
+#comments .comment-body ol {
+	margin-bottom: 18px;
+}
+#comments .comment-body p:last-child {
+	margin-bottom: 6px;
+}
+#comments .comment-body blockquote p:last-child {
+	margin-bottom: 24px;
+}
+.commentlist ol {
+	list-style: decimal;
+}
+.commentlist .avatar {
+	position: absolute;
+	top: 4px;
+	left: 0;
+}
+.comment-author {
+}
+.comment-author cite {
+	color: #000;
+	font-style: normal;
+	font-weight: bold;
+}
+.comment-author .says {
+	font-style: italic;
+}
+.comment-meta {
+	font-size: 12px;
+	margin: 0 0 18px 0;
+}
+.comment-meta a:link,
+.comment-meta a:visited {
+	color: #888;
+	text-decoration: none;
+}
+.comment-meta a:active,
+.comment-meta a:hover {
+	color: #ff4b33;
+}
+.commentlist .even {
+}
+.commentlist .bypostauthor {
+}
+.reply {
+	font-size: 12px;
+	padding: 0 0 24px 0;
+}
+.reply a,
+a.comment-edit-link {
+	color: #888;
+}
+.reply a:hover,
+a.comment-edit-link:hover {
+	color: #ff4b33;
+}
+.commentlist .children {
+	list-style: none;
+	margin: 0;
+}
+.commentlist .children li {
+	border: none;
+	margin: 0;
+}
+.nopassword,
+.nocomments {
+	display: none;
+}
+#comments .pingback {
+	border-bottom: 1px solid #e7e7e7;
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+}
+.commentlist li.comment+li.pingback {
+	margin-top: -6px;
+}
+#comments .pingback p {
+	color: #888;
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+}
+#comments .pingback .url {
+	font-size: 13px;
+	font-style: italic;
+}
+
+/* Comments form */
+input[type=submit] {
+	color: #333;
+}
+#respond {
+	border-top: 1px solid #e7e7e7;
+	margin: 24px 0;
+	overflow: hidden;
+	position: relative;
+}
+#respond p {
+	margin: 0;
+}
+#respond .comment-notes {
+	margin-bottom: 1em;
+}
+.form-allowed-tags {
+	line-height: 1em;
+}
+.children #respond {
+	margin: 0 48px 0 0;
+}
+h3#reply-title {
+	margin: 18px 0;
+}
+#comments-list #respond {
+	margin: 0 0 18px 0;
+}
+#comments-list ul #respond {
+	margin: 0;
+}
+#cancel-comment-reply-link {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+}
+#respond .required {
+	color: #ff4b33;
+	font-weight: bold;
+}
+#respond label {
+	color: #888;
+	font-size: 12px;
+}
+#respond input {
+	margin: 0 0 9px;
+	width: 98%;
+}
+#respond textarea {
+	width: 98%;
+}
+#respond .form-allowed-tags {
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+}
+#respond .form-allowed-tags code {
+	font-size: 11px;
+}
+#respond .form-submit {
+	margin: 12px 0;
+}
+#respond .form-submit input {
+	font-size: 14px;
+	width: auto;
+}
+
+
+/* =Widget Areas
+-------------------------------------------------------------- */
+
+.widget-area ul {
+	list-style: none;
+	margin: 0;
+}
+.widget-area ul ul {
+}
+.widget_search #s {/* This keeps the search inputs in line */
+	width: 60%;
+}
+.widget_search label {
+	display: none;
+}
+.widget-container {
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+	border-bottom: solid 2px #cccccc;	
+}
+.widget-title {
+	color: #1b1b1b;
+	font-weight: bold;
+	letter-spacing: .04em;
+	font-size: 18px;
+	line-height: 1em;
+	text-transform: uppercase;
+	text-shadow: 0px 1px 1px #ffffff;
+	margin-bottom: .5em;
+}
+.widget-title a {
+	color: #1b1b1b;
+}
+.widget-title a:hover {
+	color: #EC2A00;
+}
+.widget-area a:link,
+.widget-area a:visited,
+.widget-area a:active,
+.widget-area a:hover {
+	text-decoration: none;
+}
+.widget-area p a:hover {
+	text-decoration: underline;
+}
+.widget-area .entry-meta {
+	font-size: 11px;
+}
+#wp_tag_cloud div {
+	line-height: 1.6em;
+}
+#wp-calendar {
+	width: 100%;
+}
+#wp-calendar caption {
+	color: #222;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 4px;
+	text-align: left;
+}
+#wp-calendar thead {
+	font-size: 11px;
+}
+#wp-calendar thead th {
+}
+#wp-calendar tbody {
+	color: #aaa;
+}
+#wp-calendar tbody td {
+	background: #f5f5f5;
+	border: 1px solid #fff;
+	padding: 3px 0 2px;
+	text-align: center;
+	color: #777777;
+}
+#wp-calendar tbody .pad {
+	background: none;
+}
+#wp-calendar tfoot #next {
+	text-align: right;
+}
+.widget_rss a.rsswidget {
+	color: #000;
+}
+.widget_rss a.rsswidget:hover {
+	color: #ff4b33;
+}
+.widget_rss .widget-title img {
+	width: 11px;
+	height: 11px;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#footertopshadow {
+	height: 3px;
+	display: block;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/footertopshadow.png);
+	clear: both;
+}
+#footer {
+	background: #cfdbe3;
+	display: block;
+}
+body#rp #footer {
+	background: #d2dfee;
+}
+body#lb #footer {
+	background: #edd0cf;
+}
+body#pphd #footer {
+	background: #eed6c6;
+}
+body#dsq #footer {
+	background: #dadcf4;
+}
+#colophon {
+	width: 950px;
+	margin: 0 auto;
+	position: relative;
+}
+#footlabels {
+}
+#site-info a {
+	font-weight: bold;
+	float: left;
+	color: #1f272d;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 1em;
+	position: absolute;
+	top: 20px;
+	left: 59px;
+	text-shadow: 1px 1px 1px #aaa;
+}
+#footer #footeremail {
+	font-weight: bold;
+	float: left;
+	color: #222;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	position: absolute;
+	top: 40px;
+	left: 59px;
+	text-shadow: 1px 1px 1px #aaa;
+}
+#footer #footeremail a {
+	font-weight: bold;
+	color: #222;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #aaa;
+}
+#footer #footeremail a:hover {
+	color: #FF4B33;
+}
+body#rp #site-info a {
+	color: #435569;
+}
+body#lb #site-info a {
+	color: #611A13;
+}
+body#pphd #site-info a {
+	color: #443225;
+}
+body#dsq #site-info a {
+	color: #313248;
+}
+#bookshelflabel {
+	float: right;
+	color: #465661;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: absolute;
+	top: 20px;
+	left: 636px;
+	text-shadow: 1px 1px 1px #aaa;
+}
+body#rp #bookshelflabel, body#lb #bookshelflabel, body#pphd #bookshelflabel, body#dsq #bookshelflabel {
+	left: 681px;
+}
+body#rp #bookshelflabel {
+	color: #607a97;
+}
+body#lb #bookshelflabel {
+	color: #af4e44;
+}
+body#pphd #bookshelflabel {
+	color: a1816b;
+}
+body#dsq #bookshelflabel {
+	color: #666899;
+}
+#footerthumbnails {
+	padding: 15px;
+}
+#footsavarese a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresethumbnail.png);
+	width: 34px;
+	height: 51px;
+	float: left;
+	margin-right: 10px;
+}
+#footprojectlist {
+	float: right;
+}
+#footprojectlist li {
+	display: inline-block;
+	margin-left: 10px;
+	float: left;
+}
+#footprojectlist li a {
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 34px;
+	height: 51px;
+	display: block;
+}
+li#footrp a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/reasonable-peoplethumbnail.png);
+}
+li#footlb a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/seneca-reviewthumbnail.png);
+}
+li#footpphd a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/papaphdthumbnail.png);
+}
+li#footdsq a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqthumbnail.png);
+}
+
+
+/* =Mobile Safari ( iPad, iPhone and iPod Touch )
+-------------------------------------------------------------- */
+
+pre {
+	-webkit-text-size-adjust: 140%;
+}
+code {
+	-webkit-text-size-adjust: 160%;
+}
+#access,
+.entry-meta,
+.entry-utility,
+.navigation,
+.widget-area {
+	-webkit-text-size-adjust: 120%;
+}
+#site-description {
+	-webkit-text-size-adjust: none;
+}
+
+/* =Print Style
+-------------------------------------------------------------- */
+
+@media print {
+	body {
+		background: none !important;
+	}
+	#wrapper {
+		clear: both !important;
+		display: block !important;
+		float: none !important;
+		position: relative !important;
+	}
+	#header {
+		border-bottom: 2pt solid #000;
+		padding-bottom: 18pt;
+	}
+	#colophon {
+		border-top: 2pt solid #000;
+	}
+	#site-title,
+	#site-description {
+		float: none;
+		line-height: 1.4em;
+		margin: 0;
+		padding: 0;
+	}
+	#site-title {
+		font-size: 13pt;
+	}
+	.entry-content {
+		font-size: 14pt;
+		line-height: 1.6em;
+	}
+	.entry-title {
+		font-size: 21pt;
+	}
+	#access,
+	#branding img,
+	#respond,
+	.comment-edit-link,
+	.edit-link,
+	.navigation,
+	.page-link,
+	.widget-area {
+		display: none !important;
+	}
+	#container,
+	#header,
+	#footer {
+		margin: 0;
+		width: 100%;
+	}
+	#content,
+	.one-column #content {
+		margin: 24pt 0 0;
+		width: 100%;
+	}
+	.wp-caption p {
+		font-size: 11pt;
+	}
+	#site-info,
+	#site-generator {
+		float: none;
+		width: auto;
+	}
+	#colophon {
+		width: auto;
+	}
+	img#wpstats {
+		display: none;
+	}
+	#site-generator a {
+		margin: 0;
+		padding: 0;
+	}
+	#entry-author-info {
+		border: 1px solid #e7e7e7;
+	}
+	#main {
+		display: inline;
+	}
+	.home .sticky {
+		border: none;
+	}
+}
+/* Edit Post */
+body .edit-link {
+	float: right;
+	margin-top: -2.5em;
+}
+	
+/* =Custom Header
+-------------------------------------------------------------- */
+#customheader {
+	position: relative;
+	z-index: 1;
+}
+.portrait {
+	border: none;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/portraitshadow.png);
+	height: 396px;
+	width: 265px;
+	clear: both;
+}
+.portrait a {
+	height: 388px;
+	width: 258px;
+	position: absolute;
+}
+#ralphportrait a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/ralphportrait.jpg);
+	background-repeat: no-repeat;
+}
+#rpportrait a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpportrait.jpg);
+	background-repeat: no-repeat;
+}
+#srportrait a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srportrait.jpg);
+	background-repeat: no-repeat;
+}
+#pphdportrait a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdportrait.jpg);
+	background-repeat: no-repeat;
+}
+#dsqportrait a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqportrait.jpg);
+	background-repeat: no-repeat;
+}
+
+/* Bookshelf */
+#bookshelf {
+	margin: 15px 0 0;
+	display: block;
+}
+.projectlabel {
+	color: #EFF4F8;
+	letter-spacing: 2px;
+	line-height: 1em;
+	text-transform: uppercase;
+	z-index: 1;
+	padding: 0.8em 1em 0.7em 2em;
+	background: #1D2429;
+	cursor: pointer;
+	border-bottom: solid 1px #222;
+}
+.projectlabel span {
+	color: #8EA1B0;
+}
+#projectlabel {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/toggleswitch.png);
+	background-repeat: no-repeat;
+	background-position: 660px -30px;
+}
+#projectlabel.active {
+	background-position: 660px 0;
+}
+body.home #projectlabel {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/toggleswitch.png);
+	background-repeat: no-repeat;
+	background-position: 660px 0px;
+}
+body.home #projectlabel.active {
+	background-position: 660px -30px;
+}
+#projectlabel span.extended {
+	display: none;
+}
+#projectlabel span.collapsed {
+	display: inline;
+}
+#projectlabel.active span.extended {
+	display: inline;
+}
+#projectlabel.active span.collapsed {
+	display: none;
+}
+body.home #projectlabel span.extended {
+	display: inline;
+}
+body.home #projectlabel span.collapsed {
+	display: none;
+}
+body.home #projectlabel.active span.extended {
+	display: none;
+}
+body.home #projectlabel.active span.collapsed {
+	display: inline;
+}
+ul#projectlist {
+	height: 256px;
+	z-index: -1;
+	background: #090d10;
+	border: solid 2px #000;
+	display: none;
+}
+body.home ul#projectlist {
+	display: block;
+}
+ul#projectlist li {
+	width: 140px;
+	height: 210px;
+	float: left;
+	margin-left: 26px;
+	margin-top: 21px;
+	position: relative;
+}
+ul#projectlist li img {
+	width: 140px;
+	height: 210px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	-ms-interpolation-mode: bicubic; /* IE Fix for Bicubic Scaling */
+	-moz-box-shadow: 3px 5px 5px 1px #000000;
+	-webkit-box-shadow: 3px 5px 5px 1px #000000;
+}
+/* Tooltip */
+.tooltip {
+	display:none;
+	width:156px;
+	z-index: 10;
+}
+.tooltop {
+	display: block;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/tooltipbox.png);
+	height: 12px;
+	width: 156px;
+}
+.tooltipbottom {
+	display: block;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/tooltipboxbottom.png);
+	height: 16px;
+	width: 160px;
+}
+.tooltipbottomleft {
+	display: block;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/tooltipboxbottomleft.png);
+	height: 16px;
+	width: 156px;
+}
+.tooltip-body {
+	width: 128px;
+	color:#1b1b1b;	
+	padding: 10px 12px;
+	background: #eeeeee;
+	border-left: solid 2px #000000;
+	border-right: solid 2px #000000;
+	border-bottom: solid 2px #000000;
+	-moz-box-shadow: 3px 5px 5px 1px #000000;
+	-webkit-box-shadow: 3px 5px 5px 1px #000000;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.1em;
+	font-size:12px;
+}
+#colophon .tooltip-body {
+	border-top: solid 2px #000000;
+	border-bottom: none;
+}
+.tooltip-subtitle {
+	color: #376889;
+	font-size: 9px;
+	margin-top: 1px;
+	line-height: 1.1em
+}
+.tooltip-author {
+	color: #ff4b22;
+	font-size: 10px;
+	font-style: italic;
+	margin-bottom: 0;
+	text-transform: none;
+	margin-top: 2px;
+	line-height: 1.1em;
+}
+/* Custom Nav Minimum Styling */
+/* Level 1 */
+.navcont {
+	height: 32px;
+	display: block;
+	clear: both;
+}
+ul.dropdown { 
+	position: relative; 
+	height: 32px;
+	clear: both;
+	z-index: -2;
+}
+ul.dropdown li { 
+	float: left; 
+	zoom: 1; 
+	position: relative;
+}
+ul.dropdown a:hover	{ 
+}
+ul.dropdown a:active { 
+}
+ul.dropdown li a { 
+	display: inline-block; /* IE 6 & 7 Needs Inline Block */
+	font-weight: normal;
+	line-height: 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-left: 1px solid #888;
+	font-size: 1.1em;
+	padding: 10px 1.1em 0;
+	height: 22px;
+	letter-spacing: 1px;
+}
+/* Level 2 */
+ul.dropdown ul { 
+	width: 220px;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	}
+ul.dropdown ul li { 
+	font-weight: normal;
+	float: none;
+	width: 100%;
+}
+ul.dropdown ul li a	{
+	width: 100%;
+	display: inline-block; /* IE 6 & 7 Needs Inline Block */
+} 
+/* Level 3 */
+ul.dropdown ul ul { 
+	left: 100%;
+	top: 0;
+}
+ul.dropdown li:hover > ul { 
+	visibility: visible;
+}
+/* End Customnav Minimal Styling */
+/* Homenav Styling */
+#homenavcont {
+	background: #999;
+	margin: 0 0 20px;
+	background-repeat: repeat-x;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	display: block;
+}
+ul.dropdown {
+	background: #999;
+	background-repeat: repeat-x;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	border-right: solid 1px #555;
+	float: right;
+	z-index: 1;
+}
+ul.dropdown li a {
+	background: #999;
+	color: #090D10;
+	text-shadow: 0 1px 0 #becbd5;
+	padding: 10px 1.85em 0;
+	height: 22px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-position: 50% 0;
+}
+ul.dropdown li a:hover {
+	color: #EFF4F8;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-position: 50% -32px;
+}
+ul.dropdown li#writings a {
+	cursor: default;
+}
+ul.dropdown li#writings a:hover {
+	cursor: default;
+}
+ul.dropdown li#writings ul.sub_menu li a {
+	cursor: pointer;
+}
+ul.dropdown li#writings ul.sub_menu li a:hover {
+	cursor: pointer;
+}
+ul#homenav li ul.sub_menu li a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-position: 50% 0;;
+	border-right: solid 1px #555;
+}
+ul#homenav li ul.sub_menu li a:hover {
+	color: #eee;
+	text-shadow: 0 -1px 1px #000;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-position: 50% -32px;
+}
+
+/* Reasonable People Menu and Page Styling */
+#rpnavcont {
+	background: #a8c2e0;
+	margin: 20px 0;
+	background-repeat: repeat-x;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	background-position: 50% 0;
+}
+ul#rpnav.dropdown {
+	background: #a8c2e0;
+	background-repeat: repeat-x;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	background-position: 50% 0;
+	border-right: solid 1px #555;
+	float: right;
+}
+ul#rpnav.dropdown li a {
+	color: #30435a;
+	text-shadow: 0 1px 0 #dae5f2;
+	padding: 10px 1.1em 0;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+}
+ul#rpnav.dropdown li a:hover {
+	color: #F4F9FC;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background-position: 50% -32px;
+}
+ul#rpnav.dropdown li ul.sub_menu {
+}
+ul#rpnav.dropdown li ul.sub_menu li a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	border-right: solid 1px #555;
+	border-bottom: solid 1px #555;
+	background-position: 50% 0;
+	padding: 9px 1.1em 0;
+	height: 21px
+}
+ul#rpnav.dropdown li ul.sub_menu li a:hover {
+	color: #F4F9FC;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background-position: 50% -32px;
+}
+body#rp #content .hentry {
+	border-bottom: 2px dotted #A8C2E0;
+}
+body.page-id-47 #content .entry-content h2 {
+	color: #30435A;
+}
+body#rp .subtitle {
+	color: #1c3f6c;
+}
+body#rp .authorcustom {
+	color: #5678a0;
+}
+body#lb .subtitle {
+	color: #820d03;
+}
+body#lb .authorcustom {
+	color: #d63a34;
+}
+body#pphd .subtitle {
+	color: #483629;
+}
+body#pphd .authorcustom {
+	color: #68472F;
+}
+
+/* Lyric Body Menu and Page Styling */
+ul#lbnav.dropdown {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-repeat: repeat-x;
+	border-right: solid 1px #555;
+	float: left;
+	padding-left: 2em;
+	margin: 20px 0;
+	border-right: solid 1px #601A13;
+}
+ul#lbnav.dropdown li a {
+	color: #5a0b0b;
+	text-shadow: 0 1px 0 #f8aeae;
+	padding: 10px 1.1em 0;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-position: 50% 0;
+	border-left: solid 1px #601A13;
+}
+ul#lbnav.dropdown li a:hover {
+	color: #fef9f9;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background: #5a0b0b;
+	background-position: 0 2.15em;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-position: 50% -32px;
+}
+ul#lbnav.dropdown li ul.sub_menu li a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-position: 50% 0;
+	border-right: solid 1px #555;
+}
+ul#lbnav.dropdown li ul.sub_menu li a:hover {
+	color: #fef9f9;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-position: 50% -32px;
+}
+body#lb #content .hentry {
+	border-bottom: 2px dotted #D38C88;
+}
+body#lb li#text-7 {
+	padding-bottom: 0;
+}
+
+/* Papa PhD Menu Styling */
+#pphdnavcont {
+	margin: 20px 0;
+}
+ul#pphdnav.dropdown {
+	background: #d5b095;
+	background-repeat: repeat-x;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdnavback.png);
+	border-right: solid 1px #555;
+	float: left;
+	padding-left: 2em;
+}
+ul#pphdnav.dropdown li a {
+	background: #d5b095;
+	color: #3f2c1e;
+	text-shadow: 0 1px 0 #f8dbc5;
+	padding: 10px 1.1em 0;
+	height: 22px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdnavback.png);
+	background-position: 50% 0;
+}
+ul#pphdnav.dropdown li a:hover {
+	color: #FFF9EE;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background: #3f2c1e;
+	background-position: 0 -32px;
+}
+ul#pphdnav.dropdown li ul.sub_menu li a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdnavback.png);
+	background-position: 50% 0;
+	border-right: solid 1px #555;
+}
+ul#pphdnav.dropdown li ul.sub_menu li a:hover {
+	color: #FFF9EE;
+	text-shadow: 0 -1px 1px #1b1b1b;
+}
+body#pphd #content .hentry {
+	border-bottom: 2px dotted #C9A68D;
+}
+
+/* Disability Studies Quarterly Menu Styling */
+#dsqnavcont {
+	margin: 20px 0;
+}
+ul#dsqnav.dropdown {
+	background-repeat: repeat-x;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+	border-right: solid 1px #555;
+	float: left;
+	padding-left: 2em;
+}
+ul#dsqnav.dropdown li a {
+	background: #c3c6ec;
+	text-shadow: 0 1px 0 #e8e8f5;
+	padding: 10px 1.1em 0;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+}
+ul#dsqnav.dropdown li a:hover {
+	color: #F3F4FF;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	background-position: 50% -32px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+}
+ul#dsqnav.dropdown li ul.sub_menu li a {
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+	border-right: solid 1px #555;
+	border-position: 50% 0;
+}
+ul#dsqnav.dropdown li ul.sub_menu li a:hover {
+	color: #F3F4FF;
+	text-shadow: 0 -1px 1px #1b1b1b;
+	border-position: 50% -32px;
+}
+body#dsq #content .hentry {
+	border-bottom: 2px dotted #B9BCDF;
+}
+
+/* Widget Area Styling */
+#primary {
+	color: #333;
+}
+#primary img {
+	width: 198px;
+}
+#primary a img {
+	opacity: .7;
+	display: block;
+}
+#primary a:hover img {
+	opacity: 1;
+}
+#primary .widget-title {
+	color: #555;
+}
+#primary .caption {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	background: #888;
+	line-height: 1.6em;
+	margin-bottom: 15px;
+	padding-bottom: 0.3em;
+	text-align: center;
+	font-weight: bold;
+	color: #eee;
+}
+#primary h4 {
+	color: #444;
+	line-height: 1.4em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+.widget-title a {
+	color: #333;
+}
+.widget-area a {
+	color: #555;
+	font-weight: bold;
+}
+.widget-area a:visited {
+	color: #888;
+}
+.widget-area a:hover {
+	color: #FF4B33;
+}
+li.cat-post-item {
+	line-height: 1.3em;
+	border-bottom: dotted 1px #ddd;
+	padding: .2em 0 .1em;
+}
+/*Reasonable People widget styling */
+li#text-5, li#text-10 {
+	padding-bottom: 0.3em;
+	margin-top: 0.1em;
+}
+li#text-14 h3.widget-title, li#text-15 h3.widget-title {
+	margin-bottom: 0;
+}
+/* Introduction Styling */
+body.page-id-47 h1 {
+	display: none;
+}
+body.page-id-47 #content .entry-content {
+	padding-top: 0;
+}
+
+/* Post Entry Styling */
+#content .newspaper a img {
+	display: block;
+	opacity: 1;
+	margin-bottom: 0.1em;
+	clear: both;
+}
+#content .newspaper a:hover img {
+	display: block;
+	opacity: 0.8;
+}
+.subtitle {
+	color: #2877AA;
+	display: block;
+	line-height: 1.2em;
+	margin: 0.2em 0;
+}
+.subtitle a {
+	color: #2877AA;
+}
+.authorcustom {
+	color: #EC2A00;
+	font-style: italic;
+	line-height: 1.1em;
+	margin-top: .3em;
+}
+#content .custompage-link a {
+	color: #555;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1.1em;
+	font-size: 0.9em;
+	display: block;
+	margin: .2em 0;
+}
+#content .custompage-link a:hover {
+	color: #000;
+}
+#content h3 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+}
+#content .postdate {
+	background: #5c666d;
+	color: #EFF4F8;	
+	float: left;
+	display: block;
+	padding: 0.2em 1em;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 0.7em;
+	clear: both;
+}
+body#rp .postdate {
+	background: #8ba0b9;
+	color: #F4F9FC;
+}
+body#lb .postdate {
+	background: #b2352b;
+	color: #FEF9F9;
+}
+/* Featured Reviews Styling */
+body.category-reviews-reasonable-people #featuredpostcontainer {
+	background: #FCFDFE;
+	padding: 1.5em 1.5em 0.5em;
+	margin-bottom: 1.5em;
+}
+body.category-media-reasonable-people #featuredpostcontainer {
+	background: #e2edf4;
+	padding: 1.3em 1.5em 1px;
+	margin-bottom: 2.5em;
+}
+#featuredpostlabel {
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color: #405267;
+	letter-spacing: 1px;
+	margin-bottom: 0.4em;
+	font-weight: bold;
+}
+
+/* Media Category Styling */
+body#rp #content .category-media-reasonable-people, body#rp #content .category-featured-media {
+	border: 1px solid #A8C2E0;
+}
+#content .category-media-reasonable-people, #content .category-featured-media {
+	background: #FBFDFE;
+	padding: 0;
+	margin-top: 0.8em;
+	margin-bottom: 2em;
+}
+#content .category-media-reasonable-people .postdate, #content .category-featured-media .postdate {
+	background: #A8C2E0;
+	color: #FBFDFE;	
+	float: left;
+	display: block;
+	padding: 0.2em 1em;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: -1.2em 1em 0em;
+}
+#content .category-media-reasonable-people .newspaper, #content .category-featured-media .newspaper {
+	background: #FBFDFE;
+	padding: 0.8em 0.8em 0em;	
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #425469;
+	clear: both;
+}
+#content .category-media-reasonable-people h2.entry-title, #content .category-featured-media h2.entry-title {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+#content .category-media-reasonable-people h2.entry-title a, #content .category-featured-media h2.entry-title a {
+	font-size: 1.1em;
+	background: #DAE5F2;
+	margin: 0.5em 1em 1em;
+	padding: 0.4em;
+	text-shadow: none;
+	display: inline-block;
+	width: 92%;
+	border-left: solid 8px #425469;
+}
+#content .category-media-reasonable-people .entry-content, #content .category-featured-media .entry-content {
+	position: relative;
+	padding: 0;
+}
+#content .category-media-reasonable-people .entry-content p, #content .category-featured-media .entry-content p {
+	margin: .3em 1em 0;
+}
+#content .category-media-reasonable-people .entry-content a.video img, #content .category-featured-media .entry-content a.video img {
+	border: solid 10px #DAE5F2;
+}
+#content .category-media-reasonable-people .entry-content a.video span, #content .category-featured-media .entry-content a.video span {
+	position: absolute;
+	left: 170px;
+	top: 115px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/playicon.png);
+	opacity: .5;
+	height: 74px;
+	width: 74px;
+}
+#content .category-media-reasonable-people .entry-content a:hover.video span, #content .category-featured-media .entry-content a:hover.video span {
+	opacity: .8;
+}
+
+body#dsq #content .category-media-autism-and-the-concept-of-neurodiversity {
+	border: 1px solid #B9BCE0;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity {
+	background: #FBFDFE;
+	padding: 0;
+	margin-top: 0.8em;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .postdate {
+	background: #B9BCE0;
+	color: #FBFDFE;	
+	float: left;
+	display: block;
+	padding: 0.2em 1em;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: -1.2em 1em 0em;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .newspaper {
+	background: #fbfdfe;
+	padding: 0.8em 0.8em 0em;	
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #425469;
+	clear: both;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity h2.entry-title {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity h2.entry-title a {
+	font-size: 1.1em;
+	background: #B9BCE0;
+	margin: 0.5em 1em 1em;
+	padding: 0.4em;
+	text-shadow: none;
+	display: inline-block;
+	width: 92%;
+	border-left: solid 8px #32334A;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .entry-content {
+	position: relative;
+	padding: 0;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .entry-content p {
+	margin: .3em 1em 0;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .entry-content a.video img {
+	border: solid 10px #DAE5F2;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .entry-content a.video span {
+	position: absolute;
+	left: 170px;
+	top: 115px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/playicon.png);
+	opacity: .5;
+	height: 74px;
+	width: 74px;
+}
+#content .category-media-autism-and-the-concept-of-neurodiversity .entry-content a:hover.video span {
+	opacity: .8;
+}
+
+body#pphd #content .category-media-papa-phd {
+	border: 1px solid #D1AF95;
+}
+#content .category-media-papa-phd {
+	background: #FBFDFE;
+	padding: 0;
+	margin-top: 0.8em;
+}
+#content .category-media-papa-phd .postdate {
+	background: #D1AF95;
+	color: #FBFDFE;	
+	float: left;
+	display: block;
+	padding: 0.2em 1em;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: -1.2em 1em 0em;
+}
+#content .category-media-papa-phd .newspaper {
+	background: #FBFDFE;
+	padding: 0.8em 0.8em 0em;	
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #3F2C1E;
+	clear: both;
+}
+#content .category-media-papa-phd h2.entry-title {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+#content .category-media-papa-phd h2.entry-title a {
+	font-size: 1.1em;
+	background: #D1AF95;
+	margin: 0.5em 1em 1em;
+	padding: 0.4em;
+	text-shadow: none;
+	display: inline-block;
+	width: 92%;
+	border-left: solid 8px #3F2C1E;
+}
+#content .category-media-papa-phd .entry-content {
+	position: relative;
+	padding: 0;
+}
+#content .category-media-papa-phd .entry-content p {
+	margin: .3em 1em 0;
+}
+#content .category-media-papa-phd .entry-content a.video img {
+	border: solid 10px #D1AF95;
+}
+#content .category-media-papa-phd .entry-content a.video span {
+	position: absolute;
+	left: 170px;
+	top: 115px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/playicon.png);
+	opacity: .5;
+	height: 74px;
+	width: 74px;
+}
+#content .category-media-papa-phd .entry-content a:hover.video span {
+	opacity: .8;
+}
+/* Praise Category Styling */
+body#rp #content .category-praise {
+	border-bottom: none;
+}
+#content .category-praise .entry-content {
+	border: solid 2px #000;
+	padding: 20px 20px 0;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	background: #30435A;
+	color: #F4F9FC;
+}
+#content .category-praise h2.entry-title {
+	float: right;
+	font-size: 1.5em;
+	line-height: 1.1em;
+	padding-top: 4px;
+	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/textboxpointer.png);
+	padding-left: 38px;
+	background-repeat: no-repeat;
+	margin-top: -2px;
+	margin-bottom: 2px;
+}
+#content .category-praise .authorcustom {
+	clear: both;
+	display: block;
+	text-align: right;
+	font-style: normal;
+	line-height: 1em;
+}
+/* Readers Write Us Category Styling */
+body#rp #content .category-readers-write-us {
+	background: #C1D4E9;
+	padding: 0.3em 1.5em 1em;
+	border: 2px solid #FBFDFE;
+	margin-bottom: 1.5em;
+}
+#content .category-readers-write-us .entry-content {
+	color: #05090e;
+	padding-top: 1px;
+}
+#content .category-readers-write-us .entry-content p {
+	margin: 1em 0 0;
+}
+#content .category-readers-write-us h2.entry-title {
+	color: #09111a;
+	text-shadow: none;
+	text-align: right;
+}
+#content .category-readers-write-us h2.entry-title em {
+	font-weight: normal;
+	font-size: 0.7em;
+	font-style: italic;
+	color: #2d537e;
+	letter-spacing: .1em;
+}
+/* Table of Contents Styling */
+body#lb #content .post-72, body#pphd #content .post-435, body#dsq #content .post-445 {
+	border-bottom: none;
+}
+body.page-id-72 #content .entry-content p, body.page-id-435 #content .entry-content p, body.page-id-445 #content .entry-content p {
+	border-bottom: 2px dotted #e47878;
+	line-height: 1.3em;
+	margin-bottom: 0.2em;
+	padding-bottom: 0.3em;
+	padding-top: 0.2em;
+	font-weight: bold;
+	color: #222;
+	clear: both;
+}
+body.page-id-445 #content .entry-content p {
+	border-bottom: 2px dotted #2C318C;
+}
+body.page-id-72 #content .entry-content p a, body.page-id-435 #content .entry-content p a, body.page-id-445 #content .entry-content p a {
+	color: #222;
+	text-decoration: underline;
+}
+body.page-id-72 #content .entry-content p a em, body.page-id-435 #content .entry-content p a em, body.page-id-445 #content .entry-content p a em {
+	color: #222;
+	text-decoration: underline;
+}
+body.page-id-72 #content .entry-content p a:hover, body.page-id-435 #content .entry-content p a:hover {
+	color: #222;
+	text-decoration: none;
+}
+body.page-id-72 #content .entry-content p a:hover em, body.page-id-435 #content .entry-content p a:hover em {
+	color: #222;
+	text-decoration: none;
+}
+body.page-id-445 #content .entry-content p a {
+	color: #222;
+	text-decoration: none;
+}
+body.page-id-445 #content .entry-content p a em {
+	color: #222;
+	text-decoration: none;
+}
+body.page-id-445 #content .entry-content p a:hover {
+	color: #222;
+	text-decoration: underline;
+}
+body.page-id-445 #content .entry-content p a:hover em {
+	color: #222;
+	text-decoration: underline;
+}
+body.page-id-72 #content .entry-content p strong, body.page-id-435 #content .entry-content p strong {
+	color: #d35959;
+	float: left;
+	margin-right: 0.4em;
+	text-align: right;
+	width: 1.7em;
+}
+body.page-id-72 #content .entry-content p em {
+	float: right;
+	font-weight: normal;
+}
+body.page-id-435 #content .entry-content p em, body.page-id-445 #content .entry-content p em {
+	float: right;
+	font-weight: normal;
+	width: 15em;
+	text-align: right;
+}
+body.page-id-72 #content .hentry, body.page-id-435 #content .hentry, body.page-id-445 #content .hentry {
+	border-bottom: none;
+}
+body.page-id-72 #content .entry-title, body.page-id-435 #content .entry-title, body.page-id-445 #content .entry-title {
+	display: none;
+}
+body.page-id-435 #content .entry-content h4, body.page-id-445 #content .entry-content h4 {
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	font-size: 1em;
+	margin-bottom: .3em;
+	background: #f8dcc7;
+	color: #222;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	margin-top: .7em;
+	padding: 0.4em 0.8em;
+	border-right: solid 12px #68472f;
+	margin-left: -0.8em;
+}
+body.page-id-445 #content .entry-content h4 {
+	border-right: solid 12px #2C318C;
+	background: #c8ccf8;
+	line-height: 1.4em;
+}
+body.page-id-435 #content .entry-content h4 span, body.page-id-445 #content .entry-content h4 span {
+	font-size: .8em;
+	color: #68472f;
+	line-height: 1em;
+}
+body.page-id-445 #content .entry-content h4 span {
+	color: #2C318C;
+}
+/* News and Upcoming Events Styling */
+#content .category-upcoming-events {
+	background: #FAFCFD;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-bottom: none;
+	padding: 1em;
+	margin-left: 1.5em;
+}
+.date {
+	float: left;
+	width: 48px;
+	line-height: 1em;
+	-moz-border-radius: 4px;
+	-moz-box-shadow: 1px 1px 2px #333333;
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: 1px 1px 2px #333333;
+	margin-left: -2.5em;
+}
+.month {
+	background: #376889;
+	color: #ffffff;
+	width: 48px;
+	padding: 4px 0;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-radius-topleft: 4px;
+	-webkit-border-radius-topright: 4px;
+	font-weight: bold;
+	text-align: center;
+	}
+.day {
+	font-size: 1.8em;
+	padding: 8px 0;
+	color: #376889;
+	background: #ffffff;
+	text-align: center;
+	border-left: solid 2px #376889;
+	border-right: solid 2px #376889;
+	font-weight: bold;
+}
+.year {
+	background: #376889;
+	color: #ffffff;
+	width: 48px;
+	padding: 4px 0;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-radius-bottomleft: 4px;
+	-webkit-border-radius-bottomright: 4px;
+	text-align: center;
+	font-weight: bold;
+}
+#content .category-upcoming-events .postcontent {
+	float: right;
+	width: 42em;
+}
+#content .category-upcoming-events .subtitle span {
+	color: #376889;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#content .category-upcoming-events .entry-title {
+	font-size: 1.1em;
+}
+#content .category-upcoming-events .entry-content {
+	color: #666666;
+	padding: 0;
+}
+#content .category-upcoming-events .entry-content p {
+	margin-bottom: 0;
+}
+.category-upcoming-events .subtitle {
+	color: #FF4B33;
+	border-bottom: 1px dotted #bbbbbb;
+	margin-bottom: 0.4em;
+	padding-bottom: 0.4em;
+	line-height: 1em;
+}
+
+
+
+/* Footer Styling */
+.clearfloat {
+	width: 100%;
+	height: 1px;
+	clear: both;
+	margin: -1px 0 0;
+}
+
+body.home #content .hentry {
+	clear: both;
+	border-bottom: none;
+}
+body.home #content .category-media-reasonable-people {
+	border: 1px solid #A8C2E0;
+}
+body.home #content .category-media-autism-and-the-concept-of-neurodiversity {
+	border: 1px solid #B9BCE0;
+}
+/* Category Link for Home */
+#content .postlink-container {
+	float: left;
+	background: #dddddd;
+	width: 100%;
+	line-height: 1em;
+	padding: 0.8em 1em;
+	width: 633px;
+	margin-bottom: 10px;
+}
+#content .postlink-container a {
+	text-decoration: none;
+}
+#content .postlink-container a:hover {
+	text-decoration: underline;
+}
+#content .postlink-container a:visited {
+	color: #FF4B33;
+}
+#content .postlink-info {
+	float: left;
+}
+#content .postlink-postedin {
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+#content .postlink-category {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#content .category-link {
+	float: left;
+	margin-right: 0.6em;
+}
+.homecustompostcontainer {
+	border-bottom: dotted 2px #888888;
+	margin-bottom: 15px;
+}
+
+body.home #primary h3 {
+	padding-bottom: 7px;
+	border-bottom: 1px dotted #DDDDDD;
+	margin-bottom: 0;
+}
+#primary .AceRecentPostsWidget_display li {
+	padding-top: 7px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #DDDDDD;
+}
+#primary .AceRecentPostsWidget_display a {
+	display: block;
+	width: 200px;
+}
+#primary .AceRecentPostsWidget_display a img {
+	width: auto;
+	opacity: 0.8;
+	float: left;
+	width: 35px;
+}
+#primary .AceRecentPostsWidget_display a:hover img {
+	opacity: 1;
+}
+#primary .AceRecentPostsWidget_display .recentpostcontentthumbnail {
+	float: right;
+	width: 155px;
+}
+#primary .AceRecentPostsWidget_display .recentpostcategory {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	line-height: 1em;
+	margin-bottom: 0.2em;
+}
+#primary .AceRecentPostsWidget_display .recentposttitle {
+}
+
+#primary li#categoryposts-10 ul li.cat-post-item {
+	padding-bottom: 0.5em;
+	padding-top: 0.6em;
+}
+#primary a .upcomingdates {
+	color: #ffffff;
+	font-size: 1.1em;
+	padding: 0.3em 0.4em;
+	background: #888888;
+	line-height: 1em;
+	float: left;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#primary a:hover .upcomingdates {
+	background: #FF4B33;	
+}
+#primary a .upcominglocation {
+	color: #376889;
+	font-weight: normal;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	line-height: 1.1em;
+	font-weight: bold;
+	margin: 0.2em 0 0;
+	clear: both;
+}
+#primary a .upcomingtitle {
+	line-height: 1.1em;
+}
+
+body.home #content .entry-content p {
+	line-height: 1.9em;
+	margin-bottom: 1.9em;
+}
+body.home #content .entry-content p a:link {
+	font-weight: bold;
+	color: #1b1b1b;
+	text-decoration: none;
+}
+body.home #content .entry-content p a:visited {
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+body.home #content .entry-content p a:hover {
+	color: #FF4B33;
+}
+body.home #content .entry-content p span {
+	font-size: 1.7em;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+body.page-id-10 h1 {
+	display: none;
+}
+
+#primary li#text-19 h3 {
+	margin-bottom: 0;
+}
