@@ -72,7 +72,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar left of content
 #sidebar {
 	float: left;
 	width: 258px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/sidebarback.png);
+	background-image: url(/wp-content/themes/twentyten/images/sidebarback.png);
 	background-repeat: repeat-y;
 	background-position: 6px 0;
 	margin: 375px 0 0;
@@ -83,7 +83,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar left of content
 	list-style: none;
 }
 #sidebar-bottom {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/sidebarbottom.png);
+	background-image: url(/wp-content/themes/twentyten/images/sidebarbottom.png);
 	background-repeat: no-repeat;
 	width: 246px;
 	height: 17px;
@@ -1009,7 +1009,7 @@ h3#reply-title {
 #footertopshadow {
 	height: 3px;
 	display: block;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/footertopshadow.png);
+	background-image: url(/wp-content/themes/twentyten/images/footertopshadow.png);
 	clear: both;
 }
 #footer {
@@ -1113,7 +1113,7 @@ body#dsq #bookshelflabel {
 	padding: 15px;
 }
 #footsavarese a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresethumbnail.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresethumbnail.png);
 	width: 34px;
 	height: 51px;
 	float: left;
@@ -1135,16 +1135,16 @@ body#dsq #bookshelflabel {
 	display: block;
 }
 li#footrp a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/reasonable-peoplethumbnail.png);
+	background-image: url(/wp-content/themes/twentyten/images/reasonable-peoplethumbnail.png);
 }
 li#footlb a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/seneca-reviewthumbnail.png);
+	background-image: url(/wp-content/themes/twentyten/images/seneca-reviewthumbnail.png);
 }
 li#footpphd a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/papaphdthumbnail.png);
+	background-image: url(/wp-content/themes/twentyten/images/papaphdthumbnail.png);
 }
 li#footdsq a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqthumbnail.png);
+	background-image: url(/wp-content/themes/twentyten/images/dsqthumbnail.png);
 }
 
 
@@ -1272,7 +1272,7 @@ body .edit-link {
 	z-index: 2;
 	left: 0;
 	top: 0;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/portraitshadow.png);
+	background-image: url(/wp-content/themes/twentyten/images/portraitshadow.png);
 	height: 396px;
 	width: 265px;
 	clear: both;
@@ -1283,23 +1283,23 @@ body .edit-link {
 	position: absolute;
 }
 #ralphportrait a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/ralphportrait.jpg);
+	background-image: url(/wp-content/themes/twentyten/images/ralphportrait.jpg);
 	background-repeat: no-repeat;
 }
 #rpportrait a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpportrait.jpg);
+	background-image: url(/wp-content/themes/twentyten/images/rpportrait.jpg);
 	background-repeat: no-repeat;
 }
 #srportrait a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srportrait.jpg);
+	background-image: url(/wp-content/themes/twentyten/images/srportrait.jpg);
 	background-repeat: no-repeat;
 }
 #pphdportrait a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdportrait.jpg);
+	background-image: url(/wp-content/themes/twentyten/images/pphdportrait.jpg);
 	background-repeat: no-repeat;
 }
 #dsqportrait a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqportrait.jpg);
+	background-image: url(/wp-content/themes/twentyten/images/dsqportrait.jpg);
 	background-repeat: no-repeat;
 }
 
@@ -1323,7 +1323,7 @@ body .edit-link {
 	color: #8EA1B0;
 }
 #projectlabel {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/toggleswitch.png);
+	background-image: url(/wp-content/themes/twentyten/images/toggleswitch.png);
 	background-repeat: no-repeat;
 	background-position: 660px -30px;
 }
@@ -1331,7 +1331,7 @@ body .edit-link {
 	background-position: 660px 0;
 }
 body.home #projectlabel {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/toggleswitch.png);
+	background-image: url(/wp-content/themes/twentyten/images/toggleswitch.png);
 	background-repeat: no-repeat;
 	background-position: 660px 0px;
 }
@@ -1398,19 +1398,19 @@ ul#projectlist li img {
 }
 .tooltop {
 	display: block;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/tooltipbox.png);
+	background-image: url(/wp-content/themes/twentyten/images/tooltipbox.png);
 	height: 12px;
 	width: 156px;
 }
 .tooltipbottom {
 	display: block;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/tooltipboxbottom.png);
+	background-image: url(/wp-content/themes/twentyten/images/tooltipboxbottom.png);
 	height: 16px;
 	width: 160px;
 }
 .tooltipbottomleft {
 	display: block;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/tooltipboxbottomleft.png);
+	background-image: url(/wp-content/themes/twentyten/images/tooltipboxbottomleft.png);
 	height: 16px;
 	width: 156px;
 }
@@ -1514,13 +1514,13 @@ ul.dropdown li:hover > ul {
 	background: #999;
 	margin: 0 0 20px;
 	background-repeat: repeat-x;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresenavback.png);
 	display: block;
 }
 ul.dropdown {
 	background: #999;
 	background-repeat: repeat-x;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresenavback.png);
 	border-right: solid 1px #555;
 	float: right;
 	z-index: 1;
@@ -1531,13 +1531,13 @@ ul.dropdown li a {
 	text-shadow: 0 1px 0 #becbd5;
 	padding: 10px 1.85em 0;
 	height: 22px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresenavback.png);
 	background-position: 50% 0;
 }
 ul.dropdown li a:hover {
 	color: #EFF4F8;
 	text-shadow: 0 -1px 1px #1b1b1b;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresenavback.png);
 	background-position: 50% -32px;
 }
 ul.dropdown li#writings a {
@@ -1553,14 +1553,14 @@ ul.dropdown li#writings ul.sub_menu li a:hover {
 	cursor: pointer;
 }
 ul#homenav li ul.sub_menu li a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresenavback.png);
 	background-position: 50% 0;;
 	border-right: solid 1px #555;
 }
 ul#homenav li ul.sub_menu li a:hover {
 	color: #eee;
 	text-shadow: 0 -1px 1px #000;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/savaresenavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/savaresenavback.png);
 	background-position: 50% -32px;
 }
 
@@ -1569,13 +1569,13 @@ ul#homenav li ul.sub_menu li a:hover {
 	background: #a8c2e0;
 	margin: 20px 0;
 	background-repeat: repeat-x;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/rpnavback.png);
 	background-position: 50% 0;
 }
 ul#rpnav.dropdown {
 	background: #a8c2e0;
 	background-repeat: repeat-x;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/rpnavback.png);
 	background-position: 50% 0;
 	border-right: solid 1px #555;
 	float: right;
@@ -1587,7 +1587,7 @@ ul#rpnav.dropdown li a {
 	height: 22px;
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/rpnavback.png);
 }
 ul#rpnav.dropdown li a:hover {
 	color: #F4F9FC;
@@ -1597,7 +1597,7 @@ ul#rpnav.dropdown li a:hover {
 ul#rpnav.dropdown li ul.sub_menu {
 }
 ul#rpnav.dropdown li ul.sub_menu li a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/rpnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/rpnavback.png);
 	border-right: solid 1px #555;
 	border-bottom: solid 1px #555;
 	background-position: 50% 0;
@@ -1636,7 +1636,7 @@ body#pphd .authorcustom {
 
 /* Lyric Body Menu and Page Styling */
 ul#lbnav.dropdown {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/srnavback.png);
 	background-repeat: repeat-x;
 	border-right: solid 1px #555;
 	float: left;
@@ -1650,7 +1650,7 @@ ul#lbnav.dropdown li a {
 	padding: 10px 1.1em 0;
 	height: 22px;
 	background-repeat: no-repeat;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/srnavback.png);
 	background-position: 50% 0;
 	border-left: solid 1px #601A13;
 }
@@ -1659,18 +1659,18 @@ ul#lbnav.dropdown li a:hover {
 	text-shadow: 0 -1px 1px #1b1b1b;
 	background: #5a0b0b;
 	background-position: 0 2.15em;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/srnavback.png);
 	background-position: 50% -32px;
 }
 ul#lbnav.dropdown li ul.sub_menu li a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/srnavback.png);
 	background-position: 50% 0;
 	border-right: solid 1px #555;
 }
 ul#lbnav.dropdown li ul.sub_menu li a:hover {
 	color: #fef9f9;
 	text-shadow: 0 -1px 1px #1b1b1b;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/srnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/srnavback.png);
 	background-position: 50% -32px;
 }
 body#lb #content .hentry {
@@ -1687,7 +1687,7 @@ body#lb li#text-7 {
 ul#pphdnav.dropdown {
 	background: #d5b095;
 	background-repeat: repeat-x;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/pphdnavback.png);
 	border-right: solid 1px #555;
 	float: left;
 	padding-left: 2em;
@@ -1698,7 +1698,7 @@ ul#pphdnav.dropdown li a {
 	text-shadow: 0 1px 0 #f8dbc5;
 	padding: 10px 1.1em 0;
 	height: 22px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/pphdnavback.png);
 	background-position: 50% 0;
 }
 ul#pphdnav.dropdown li a:hover {
@@ -1708,7 +1708,7 @@ ul#pphdnav.dropdown li a:hover {
 	background-position: 0 -32px;
 }
 ul#pphdnav.dropdown li ul.sub_menu li a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/pphdnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/pphdnavback.png);
 	background-position: 50% 0;
 	border-right: solid 1px #555;
 }
@@ -1726,7 +1726,7 @@ body#pphd #content .hentry {
 }
 ul#dsqnav.dropdown {
 	background-repeat: repeat-x;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/dsqnavback.png);
 	border-right: solid 1px #555;
 	float: left;
 	padding-left: 2em;
@@ -1738,16 +1738,16 @@ ul#dsqnav.dropdown li a {
 	height: 22px;
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/dsqnavback.png);
 }
 ul#dsqnav.dropdown li a:hover {
 	color: #F3F4FF;
 	text-shadow: 0 -1px 1px #1b1b1b;
 	background-position: 50% -32px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/dsqnavback.png);
 }
 ul#dsqnav.dropdown li ul.sub_menu li a {
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/dsqnavback.png);
+	background-image: url(/wp-content/themes/twentyten/images/dsqnavback.png);
 	border-right: solid 1px #555;
 	border-position: 50% 0;
 }
@@ -1976,7 +1976,7 @@ body#rp #content .category-media-reasonable-people, body#rp #content .category-f
 	position: absolute;
 	left: 170px;
 	top: 115px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/playicon.png);
+	background-image: url(/wp-content/themes/twentyten/playicon.png);
 	opacity: .5;
 	height: 74px;
 	width: 74px;
@@ -2043,7 +2043,7 @@ body#dsq #content .category-media-autism-and-the-concept-of-neurodiversity {
 	position: absolute;
 	left: 170px;
 	top: 115px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/playicon.png);
+	background-image: url(/wp-content/themes/twentyten/playicon.png);
 	opacity: .5;
 	height: 74px;
 	width: 74px;
@@ -2110,7 +2110,7 @@ body#pphd #content .category-media-papa-phd {
 	position: absolute;
 	left: 170px;
 	top: 115px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/playicon.png);
+	background-image: url(/wp-content/themes/twentyten/playicon.png);
 	opacity: .5;
 	height: 74px;
 	width: 74px;
@@ -2135,7 +2135,7 @@ body#rp #content .category-praise {
 	font-size: 1.5em;
 	line-height: 1.1em;
 	padding-top: 4px;
-	background-image: url(http://grantcuster.com/savarese/wp-content/themes/twentyten/images/textboxpointer.png);
+	background-image: url(/wp-content/themes/twentyten/images/textboxpointer.png);
 	padding-left: 38px;
 	background-repeat: no-repeat;
 	margin-top: -2px;
